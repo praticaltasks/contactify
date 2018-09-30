@@ -1,0 +1,59 @@
+@import '../../../styles/variables';
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        border-radius: 20px;
+        padding: 4px 10px;
+        border: 2px #486369 solid;
+
+        input, select {
+            border: none;
+            outline: none;
+            font-size: 20px;
+        }
+    }
+
+    .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+
+        .checkbox {
+            background-color: $white;
+            border: 1px $primary solid;
+            width: 14px;
+            height: 14px;
+            position: relative;
+            margin-right: 5px;
+            cursor: pointer;
+
+            fa {
+                font-size: 12px;
+                color: $green;
+                position: absolute;
+                top: -1px;
+                left: 1px;
+            }
+        }
+        label {
+            color: $white;
+        }
+    }
+
+    button {
+        font-size: 20px;
+        color: $white;
+        outline: none;
+        border: 2px #578289 solid;
+        border-radius: 20px;
+        background-color: transparent;
+        padding: 5px 30px;
+        cursor: pointer;
+    }
+}

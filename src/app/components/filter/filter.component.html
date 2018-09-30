@@ -1,0 +1,15 @@
+<div class="input-wrapper">
+    <input id="name" placeholder="Name"/>
+</div>
+<div class="input-wrapper">
+    <select>
+        <option *ngFor="let city of cities">{{city}}</option>
+    </select>
+</div>
+<div class="checkbox-wrapper">
+    <div id="active" class="checkbox" (click)="toggleActiveCheck()">
+        <fa *ngIf="isActiveChecked" name="check"></fa>
+    </div>
+    <label for="active">Show active</label>
+</div>
+<button>Filter</button>

@@ -1,0 +1,31 @@
+@import '../../../styles/variables';
+
+:host {
+    display: flex;
+    flex: 1 0 20%;
+    max-width: 20%;
+    max-height: 386px;
+    border-radius: 10px;
+    background-color: $white;
+    border: 2px $primary solid;
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+    img {
+        max-width: 80%;
+        border-radius: 50%;
+        border: 3px lighten($black, 80) solid;
+    }
+
+    .row {
+        .name {
+            color: lighten($black, 80);
+            text-align: right;
+            margin-right: 5px;
+        }
+    }
+}

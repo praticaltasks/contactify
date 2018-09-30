@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+
+:host {
+    display: flex;
+    align-self: stretch;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        color: $white;
+
+        &.v-padding {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &:last-child {
+            padding-left: 20px;
+        }
+
+        .link, .text {
+            color: $white;
+            margin: 5px 0;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            .link {
+                margin: 0 5px;
+            }
+        }
+        .row-block {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            background-color: $blue;
+            padding: 10px 20px;
+
+            fa[name="cloud-upload"], fa[name="stethoscope"] {
+                font-size: 40px;
+                margin-right: 20px;
+            }
+
+            fa[name="stethoscope"] {
+                font-size: 40px;
+            }
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+
+            .link-wrapper {
+                fa[name="refresh"] {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

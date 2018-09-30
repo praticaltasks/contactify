@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+:host {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    border-radius: 20px;
+    padding: 4px 10px;
+    border: 2px lighten($black, 80) solid;
+
+    input {
+        border: none;
+        outline: none;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,52 @@
+<table cellspacing="0" cellpadding="0">
+    <thead>
+    <tr>
+        <th class="heading h-1" (click)="sort('name')">
+            <span>Name</span>
+            <fa *ngIf="currentOrder.name === 'name' && currentOrder.order === 'DESC'" name="arrow-down"></fa>
+            <fa *ngIf="currentOrder.name === 'name' && currentOrder.order === 'ASC'" name="arrow-up"></fa>
+        </th>
+        <th class="heading h-2" (click)="sort('surname')">
+            <span>Surname</span>
+            <fa *ngIf="currentOrder.name === 'surname' && currentOrder.order === 'DESC'" name="arrow-down"></fa>
+            <fa *ngIf="currentOrder.name === 'surname' && currentOrder.order === 'ASC'" name="arrow-up"></fa>
+        </th>
+        <th class="heading h-3" (click)="sort('city')">
+            <span>City</span>
+            <fa *ngIf="currentOrder.name === 'city' && currentOrder.order === 'DESC'" name="arrow-down"></fa>
+            <fa *ngIf="currentOrder.name === 'city' && currentOrder.order === 'ASC'" name="arrow-up"></fa>
+        </th>
+        <th class="heading h-4" (click)="sort('email')">
+            <span>Email</span>
+            <fa *ngIf="currentOrder.name === 'email' && currentOrder.order === 'DESC'" name="arrow-down"></fa>
+            <fa *ngIf="currentOrder.name === 'email' && currentOrder.order === 'ASC'" name="arrow-up"></fa>
+        </th>
+        <th class="heading h-5" (click)="sort('phone')">
+            <span>Phone</span>
+            <fa *ngIf="currentOrder.name === 'phone' && currentOrder.order === 'DESC'" name="arrow-down"></fa>
+            <fa *ngIf="currentOrder.name === 'phone' && currentOrder.order === 'ASC'" name="arrow-up"></fa>
+        </th>
+        <th class="heading h-6"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contact of contacts" class="contact" [ngClass]="{'selected': currentContactId === contact.id}" (click)="selectContact(contact)">
+        <td>
+            <span [ngSwitch]="contact.active">
+                <fa *ngSwitchCase="true" name="eye"></fa>
+                <fa *ngSwitchCase="false" name="eye-slash"></fa>
+                <fa *ngSwitchCase="" name="eye-slash"></fa>
+            </span>
+            <span>{{contact.name}}</span>
+        </td>
+        <td>{{contact.surname}}</td>
+        <td>{{contact.city}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.phone}}</td>
+        <td class="icons">
+            <fa name="pencil"></fa>
+            <fa name="trash"></fa>
+        </td>
+    </tr>
+    </tbody>
+</table>

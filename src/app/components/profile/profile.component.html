@@ -1,0 +1,25 @@
+<div *ngIf="currentContact" class="profile">
+    <img src="assets/userpic.jpg" alt="Photo"/>
+    <table>
+        <tr class="row">
+            <td class="name">Name:</td>
+            <td>{{currentContact.name}}</td>
+        </tr>
+        <tr class="row">
+            <td class="name">Surname:</td>
+            <td>{{currentContact.surname}}</td>
+        </tr>
+        <tr class="row">
+            <td class="name">City:</td>
+            <td>{{currentContact.city}}</td>
+        </tr>
+        <tr class="row">
+            <td class="name">Email:</td>
+            <td>{{currentContact.email}}</td>
+        </tr>
+        <tr class="row">
+            <td class="name">Phone:</td>
+            <td>{{currentContact.phone}}</td>
+        </tr>
+    </table>
+</div>
